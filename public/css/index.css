@@ -1,0 +1,16 @@
+.main {
+    margin: 1em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+br {
+    user-select: none;
+}
+
+form {
+    display: inline-block;
+}
