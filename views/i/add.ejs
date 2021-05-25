@@ -2,13 +2,13 @@
 <form action="/api/add" method="post" class="w-400 mw-full">
     <div class="form-group">
         <label for="idea">What is the idea?</label>
-        <input type="text" class="form-control" id="idea" required="required" />
+        <input type="text" class="form-control" name="idea" required="required" />
         <br />
         <label for="description">Describe your idea</label>
-        <textarea class="form-control" id="description" required="required"></textarea>
+        <textarea class="form-control" name="description" required="required"></textarea>
         <br />
         <label for="author">What is the name who you want to be displayed as the author?</label>
-        <input type="text" class="form-control" id="author" required="required" />
+        <input type="text" class="form-control" name="author" required="required" />
     </div>
     <!-- Submit button -->
     <input class="btn btn-primary" type="submit" value="Submit">

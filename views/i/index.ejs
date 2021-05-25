@@ -1,0 +1,9 @@
+<h1>Ideas</h1>
+<a class="btn btn-primary" href="/i/add">Add an idea</a>
+<% db.all().forEach(function(idea){ %>
+    <% i = db.get(idea["ID"]) %>
+    <div class="box">
+        <h2><a href="/i/<%= idea['ID'] %>" ><%= i["idea"] %></a></h2>
+        <p>By <%= i["author"] %></p>
+    </div>
+<% }); %>

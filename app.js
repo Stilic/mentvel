@@ -20,7 +20,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/i", (req, res) => {
-    res.render("ideas", { title: "Ideas", ideas: db.all() });
+    res.render("i/index", { title: "Ideas", db: db });
+});
+
+app.get("/i/:id", (req, res) => {
+    res.render("i/show", { title: db.get(req.params["id"])["idea"] + " - Ideas", db: db, id: req.params["id"] });
 });
 
 app.get("/i/add", (req, res) => {
@@ -31,14 +35,12 @@ app.get("/about", (req, res) => {
     res.render("about", { title: "About" });
 });
 
-// Internal API
-
 app.post("/api/add", (req, res) => {
-    db.set(customId({}), {
-        idea: req.body.idea,
-        description: req.body.description,
-        author: req.body.author,
-    });
+    id = customId({});
+    db.set(id, {})
+    db.push(id + ".idea", req.body.idea);
+    db.push(id + ".description", req.body.description);
+    db.push(id + ".author", req.body.author);
     res.redirect(301, "/i");
 });
 

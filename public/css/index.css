@@ -1,5 +1,7 @@
 .main {
-    margin: 1em;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 1em;
     text-align: center;
 }
 
@@ -13,4 +15,12 @@ br {
 
 form {
     display: inline-block;
+}
+
+.box {
+    margin: 1em;
+    padding: 1em;
+    background-color: #333;
+    border: solid 2px gray;
+    border-radius: 15px;
 }
