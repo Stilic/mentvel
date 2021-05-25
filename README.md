@@ -20,9 +20,9 @@ For development:
 # Clone the repository
 git clone https://github.com/Stylix58/mentvel.git
 # Setup dependancies
-npm i --prod
+npm i
 # Launch the live server
-npm watch
+npm run watch
 ```
 
 ## License
