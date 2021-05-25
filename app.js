@@ -27,7 +27,7 @@ app.get("/i/:id", (req, res) => {
     res.render("i/show", { title: db.get(req.params["id"])["idea"] + " - Ideas", db: db, id: req.params["id"] });
 });
 
-app.get("/i/add", (req, res) => {
+app.get("/add", (req, res) => {
     res.render("i/add", { title: "Add an idea" });
 });
 
